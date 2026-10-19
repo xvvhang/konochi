@@ -24,7 +24,7 @@ your windows within reach, your music visible, and your next break on time.
 | [**Konobreak**](https://github.com/xvvhang/omarchy-konobreak-plugin) | Work and break intervals with a bar countdown, notifications, pause/resume, and snoozing. | `konochi.konobreak` |
 | [**Konobeat**](https://github.com/xvvhang/omarchy-konobeat-plugin) | Now-playing controls, scrolling track information, and eight real-audio visualization styles. | `konochi.konobeat` |
 | [**Konoview**](https://github.com/xvvhang/omarchy-konoview-plugin) | A fullscreen window overview with live previews, keyboard hints, search, and optional double-Super activation. | `konochi.konoview` |
-| [**Konostate**](https://github.com/xvvhang/omarchy-konostate-plugin) | CPU, GPU, memory, storage, network, fan, and temperature monitoring with configurable bar metrics. | `konochi.konostate` |
+| [**Konostat**](https://github.com/xvvhang/omarchy-konostat-plugin) | CPU, GPU, memory, storage, network, fan, and temperature monitoring with configurable bar metrics. | `konochi.konostat` |
 | [**Konospaces**](https://github.com/xvvhang/omarchy-konospaces-plugin) | Workspace labels with per-window application icons, special-workspace support, and live updates. | `konochi.konospaces` |
 
 Each plugin has its own repository, documentation, license, and issue tracker.
@@ -51,7 +51,7 @@ omarchy plugin add https://github.com/xvvhang/omarchy-konobeat-plugin --enable
 omarchy plugin add https://github.com/xvvhang/omarchy-konoview-plugin --enable
 
 # System monitoring
-omarchy plugin add https://github.com/xvvhang/omarchy-konostate-plugin --enable
+omarchy plugin add https://github.com/xvvhang/omarchy-konostat-plugin --enable
 
 # Workspace application icons
 omarchy plugin add https://github.com/xvvhang/omarchy-konospaces-plugin --enable
@@ -70,7 +70,7 @@ omarchy plugin add https://github.com/xvvhang/omarchy-konospaces-plugin --enable
   manually if you want to avoid duplicate controls and notifications.
 - **Konoview** works through shell IPC. Double-Super activation requires the
   optional manual keybinding setup documented in its repository.
-- **Konostate** uses Python 3 and readable system telemetry. Hardware support
+- **Konostat** uses Python 3 and readable system telemetry. Hardware support
   varies; NVIDIA metrics optionally use an already-installed `nvidia-smi`.
 - **Konospaces** uses Hyprland's Lua dispatch interface. Disable
   `omarchy.workspaces` manually if you want to replace the stock widget.
