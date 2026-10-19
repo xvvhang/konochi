@@ -45,7 +45,7 @@ an image to view it at full resolution.
 
 | Konospaces | Konoview |
 | --- | --- |
-| [<img src="https://raw.githubusercontent.com/xvvhang/omarchy-konospaces-plugin/main/preview.png" alt="Konospaces numbered workspaces with per-window application icons" width="360">](https://github.com/xvvhang/omarchy-konospaces-plugin/blob/main/preview.png) | A public preview screenshot is coming soon. |
+| [<img src="https://raw.githubusercontent.com/xvvhang/omarchy-konospaces-plugin/main/preview.png" alt="Konospaces numbered workspaces with per-window application icons" width="360">](https://github.com/xvvhang/omarchy-konospaces-plugin/blob/main/preview.png) | [<img src="https://raw.githubusercontent.com/xvvhang/omarchy-konoview-plugin/main/preview.png" alt="Konoview live window previews with search and keyboard selection hints" width="360">](https://github.com/xvvhang/omarchy-konoview-plugin/blob/main/preview.png) |
 
 ## Installation
 
