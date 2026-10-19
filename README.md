@@ -6,7 +6,7 @@
 
 A personal collection of native Omarchy plugins by [Alec Xu](https://github.com/xvvhang).
 
-[Explore the plugins](#plugins) · [Installation](#installation) · [Feedback](#feedback)
+[Explore the plugins](#plugins) · [Screenshots](#screenshots) · [Installation](#installation) · [Feedback](#feedback)
 
 </div>
 
@@ -29,6 +29,23 @@ your windows within reach, your music visible, and your next break on time.
 
 Each plugin has its own repository, documentation, license, and issue tracker.
 This repository is the series showcase, not an installable Omarchy plugin.
+
+## Screenshots
+
+Screenshots are maintained as `preview.png` in each plugin repository. Select
+an image to view it at full resolution.
+
+| Konousage | Konobreak |
+| --- | --- |
+| [<img src="https://raw.githubusercontent.com/xvvhang/omarchy-konousage-plugin/main/preview.png" alt="Konousage account tabs and remaining coding quota" width="360">](https://github.com/xvvhang/omarchy-konousage-plugin/blob/main/preview.png) | [<img src="https://raw.githubusercontent.com/xvvhang/omarchy-konobreak-plugin/main/preview.png" alt="Konobreak countdown, work and break durations, and session controls" width="360">](https://github.com/xvvhang/omarchy-konobreak-plugin/blob/main/preview.png) |
+
+| Konobeat | Konostat |
+| --- | --- |
+| [<img src="https://raw.githubusercontent.com/xvvhang/omarchy-konobeat-plugin/main/preview.png" alt="Konobeat playback controls and audio visualizer settings" width="360">](https://github.com/xvvhang/omarchy-konobeat-plugin/blob/main/preview.png) | [<img src="https://raw.githubusercontent.com/xvvhang/omarchy-konostat-plugin/main/preview.png" alt="Konostat system monitoring panel and bar metric switches" width="360">](https://github.com/xvvhang/omarchy-konostat-plugin/blob/main/preview.png) |
+
+| Konospaces | Konoview |
+| --- | --- |
+| [<img src="https://raw.githubusercontent.com/xvvhang/omarchy-konospaces-plugin/main/preview.png" alt="Konospaces numbered workspaces with per-window application icons" width="360">](https://github.com/xvvhang/omarchy-konospaces-plugin/blob/main/preview.png) | A public preview screenshot is coming soon. |
 
 ## Installation
 
