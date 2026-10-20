@@ -14,12 +14,14 @@ A personal collection of native Omarchy plugins by [Alec Xu](https://github.com/
 
 Inspired by *konomi* — preference or taste — Konochi brings small, thoughtful
 improvements to the desktop you use every day. Keep your workspaces recognizable,
-your windows within reach, your music visible, and your next break on time.
+your windows within reach, your music visible, your dev ports under control,
+and your next break on time.
 
 ## Plugins
 
 | Plugin | What it does | Plugin ID |
 | --- | --- | --- |
+| [**Konoports**](https://github.com/xvvhang/omarchy-konoports-plugin) | Local dev servers, listening ports and process commands, with browser links and confirmed process termination. | `konochi.konoports` |
 | [**Konousage**](https://github.com/xvvhang/omarchy-konousage-plugin) | Account-separated ChatGPT coding quotas and reset times for OpenCode and Codex. | `konochi.konousage` |
 | [**Konobreak**](https://github.com/xvvhang/omarchy-konobreak-plugin) | Work and break intervals with a bar countdown, notifications, pause/resume, and snoozing. | `konochi.konobreak` |
 | [**Konobeat**](https://github.com/xvvhang/omarchy-konobeat-plugin) | Now-playing controls, scrolling track information, and eight real-audio visualization styles. | `konochi.konobeat` |
@@ -32,8 +34,12 @@ This repository is the series showcase, not an installable Omarchy plugin.
 
 ## Screenshots
 
-Screenshots are maintained as `preview.png` in each plugin repository. Select
-an image to view it at full resolution.
+Screenshots are maintained in this showcase's `assets/` directory or as
+`preview.png` in each plugin repository. Select an image to view it at full resolution.
+
+| Konoports |
+| --- |
+| [<img src="assets/konoports.png" alt="Konoports local dev server, port, launch command, and browser and process controls" width="360">](assets/konoports.png) |
 
 | Konousage | Konobreak |
 | --- | --- |
@@ -55,6 +61,9 @@ permissions, setup instructions, and limitations before installing.
 Run only the commands for the plugins you want:
 
 ```sh
+# Local dev servers and ports
+omarchy plugin add https://github.com/xvvhang/omarchy-konoports-plugin --enable
+
 # Agent subscription usage
 omarchy plugin add https://github.com/xvvhang/omarchy-konousage-plugin --enable
 
@@ -76,6 +85,9 @@ omarchy plugin add https://github.com/xvvhang/omarchy-konospaces-plugin --enable
 
 ### Before you start
 
+- **Konoports** uses Python 3.9+ and Linux `/proc`/pidfds. It scans current-user
+  TCP listeners locally, with heuristic dev-server detection. Stopping requires
+  confirmation and affects the entire process; no root/system processes are managed.
 - **Konousage** reads the active clients' credentials and contacts ChatGPT's
   usage endpoint. It does not modify credentials or cache tokens. Read its
   authentication and privacy documentation before enabling it.
