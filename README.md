@@ -14,14 +14,15 @@ A personal collection of native Omarchy plugins by [Alec Xu](https://github.com/
 
 Inspired by *konomi* — preference or taste — Konochi brings small, thoughtful
 improvements to the desktop you use every day. Keep your workspaces recognizable,
-your windows within reach, your music visible, your dev ports under control,
-and your next break on time.
+your windows within reach, your music visible, your dev ports and proxy routing
+under control, and your next break on time.
 
 ## Plugins
 
 | Plugin | What it does | Plugin ID |
 | --- | --- | --- |
 | [**Konoports**](https://github.com/xvvhang/omarchy-konoports-plugin) | Local dev servers, listening ports and process commands, with browser links and confirmed process termination. | `konochi.konoports` |
+| [**Konoproxy**](https://github.com/xvvhang/omarchy-konoproxy-plugin) | Native Mihomo proxy controls, subscriptions, profiles, rules, node selection and latency checks, with explicitly authorized core setup. | `konochi.konoproxy` |
 | [**Konousage**](https://github.com/xvvhang/omarchy-konousage-plugin) | Account-separated ChatGPT coding quotas and reset times for OpenCode and Codex. | `konochi.konousage` |
 | [**Konobreak**](https://github.com/xvvhang/omarchy-konobreak-plugin) | Work and break intervals with a bar countdown, notifications, pause/resume, and snoozing. | `konochi.konobreak` |
 | [**Konobeat**](https://github.com/xvvhang/omarchy-konobeat-plugin) | Now-playing controls, scrolling track information, and eight real-audio visualization styles. | `konochi.konobeat` |
@@ -37,9 +38,9 @@ This repository is the series showcase, not an installable Omarchy plugin.
 Screenshots are maintained in this showcase's `assets/` directory or as
 `preview.png` in each plugin repository. Select an image to view it at full resolution.
 
-| Konoports |
-| --- |
-| [<img src="assets/konoports.png" alt="Konoports local dev server, port, launch command, and browser and process controls" width="360">](assets/konoports.png) |
+| Konoports | Konoproxy |
+| --- | --- |
+| [<img src="assets/konoports.png" alt="Konoports local dev server, port, launch command, and browser and process controls" width="360">](assets/konoports.png) | [<img src="https://raw.githubusercontent.com/xvvhang/omarchy-konoproxy-plugin/main/preview.png" alt="Konoproxy cat bar icon and native proxy controls with an anonymized node label" width="360">](https://github.com/xvvhang/omarchy-konoproxy-plugin/blob/main/preview.png) |
 
 | Konousage | Konobreak |
 | --- | --- |
@@ -63,6 +64,9 @@ Run only the commands for the plugins you want:
 ```sh
 # Local dev servers and ports
 omarchy plugin add https://github.com/xvvhang/omarchy-konoports-plugin --enable
+
+# Proxy controls, profiles and rules
+omarchy plugin add https://github.com/xvvhang/omarchy-konoproxy-plugin --enable
 
 # Agent subscription usage
 omarchy plugin add https://github.com/xvvhang/omarchy-konousage-plugin --enable
@@ -88,6 +92,14 @@ omarchy plugin add https://github.com/xvvhang/omarchy-konospaces-plugin --enable
 - **Konoports** uses Python 3.9+ and Linux `/proc`/pidfds. It scans current-user
   TCP listeners locally, with heuristic dev-server detection. Stopping requires
   confirmation and affects the entire process; no root/system processes are managed.
+- **Konoproxy** needs system Python 3.11+. Enabling the plugin alone installs no
+  core and captures no traffic. Settings offers explicitly authorized installation
+  of a pinned Mihomo core and dedicated service, with optional boot startup and
+  narrowly scoped password-free controls. TUN changes routing and DNS; review
+  existing VPNs first. Opening the panel probes nodes through Google and
+  Cloudflare for latency and exit-region checks. Use **Settings → Uninstall**
+  for optional core/service cleanup; removing or disabling only the plugin can
+  leave the service and proxying active.
 - **Konousage** reads the active clients' credentials and contacts ChatGPT's
   usage endpoint. It does not modify credentials or cache tokens. Read its
   authentication and privacy documentation before enabling it.
@@ -119,6 +131,8 @@ omarchy plugin remove konochi.konobeat
 
 Use the corresponding ID from the table for other plugins. Read the individual
 removal instructions to restore stock widgets or remove optional keybindings.
+For Konoproxy, use its in-panel uninstall flow when also removing the managed
+core; the generic plugin-removal command does not run core cleanup.
 Back up unpushed development changes before removing a plugin: removal can delete
 its local Git checkout.
 
