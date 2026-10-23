@@ -40,7 +40,7 @@ Screenshots are maintained in this showcase's `assets/` directory or as
 
 | Konoports | Konoproxy |
 | --- | --- |
-| [<img src="assets/konoports.png" alt="Konoports local dev server, port, launch command, and browser and process controls" width="360">](assets/konoports.png) | [<img src="https://raw.githubusercontent.com/xvvhang/omarchy-konoproxy-plugin/main/preview.png" alt="Konoproxy cat bar icon and native proxy controls with an anonymized node label" width="360">](https://github.com/xvvhang/omarchy-konoproxy-plugin/blob/main/preview.png) |
+| [<img src="assets/konoports.png" alt="Konoports local dev server, port, launch command, and browser and process controls" width="360">](assets/konoports.png) | [<img src="assets/konoproxy.png" alt="Konoproxy cat bar icon and native proxy controls with an anonymized node label" width="360">](assets/konoproxy.png) |
 
 | Konousage | Konobreak |
 | --- | --- |
