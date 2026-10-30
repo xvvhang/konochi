@@ -39,6 +39,10 @@ This repository is the series showcase, not an installable Omarchy plugin.
 Screenshots are maintained in this showcase's `assets/` directory or as
 `preview.png` in each plugin repository. Select an image to view it at full resolution.
 
+### Konocontrol
+
+[<img src="https://raw.githubusercontent.com/xvvhang/omarchy-konocontrol-plugin/main/preview.png" alt="Konocontrol with Media, Quick Actions, and native controls" width="360">](https://github.com/xvvhang/omarchy-konocontrol-plugin/blob/main/preview.png)
+
 | Konoports | Konoproxy |
 | --- | --- |
 | [<img src="assets/konoports.png" alt="Konoports local dev server, port, launch command, and browser and process controls" width="360">](assets/konoports.png) | [<img src="assets/konoproxy.png" alt="Konoproxy cat bar icon and native proxy controls with an anonymized node label" width="360">](assets/konoproxy.png) |
