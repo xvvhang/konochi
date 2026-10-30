@@ -21,6 +21,7 @@ under control, and your next break on time.
 
 | Plugin | What it does | Plugin ID |
 | --- | --- | --- |
+| [**Konocontrol**](https://github.com/xvvhang/omarchy-konocontrol-plugin) | A native control center collecting built-in bar widgets into Media, Quick Actions, and Controls. | `konochi.konocontrol` |
 | [**Konoports**](https://github.com/xvvhang/omarchy-konoports-plugin) | Local dev servers, listening ports and process commands, with browser links and confirmed process termination. | `konochi.konoports` |
 | [**Konoproxy**](https://github.com/xvvhang/omarchy-konoproxy-plugin) | Native Mihomo proxy controls, subscriptions, profiles, rules, node selection and latency checks, with explicitly authorized core setup. | `konochi.konoproxy` |
 | [**Konousage**](https://github.com/xvvhang/omarchy-konousage-plugin) | Account-separated ChatGPT coding quotas and reset times for OpenCode and Codex. | `konochi.konousage` |
@@ -62,6 +63,9 @@ permissions, setup instructions, and limitations before installing.
 Run only the commands for the plugins you want:
 
 ```sh
+# Native control center
+omarchy plugin add https://github.com/xvvhang/omarchy-konocontrol-plugin --enable
+
 # Local dev servers and ports
 omarchy plugin add https://github.com/xvvhang/omarchy-konoports-plugin --enable
 
@@ -89,6 +93,9 @@ omarchy plugin add https://github.com/xvvhang/omarchy-konospaces-plugin --enable
 
 ### Before you start
 
+- **Konocontrol** collects existing built-in Omarchy widgets only, excluding Tray.
+  Keep collected widgets enabled in `bar.layout`; third-party plugins stay in the
+  bar. It depends on native shell internals and may need updates as Omarchy evolves.
 - **Konoports** uses Python 3.9+ and Linux `/proc`/pidfds. It scans current-user
   TCP listeners locally, with heuristic dev-server detection. Stopping requires
   confirmation and affects the entire process; no root/system processes are managed.
