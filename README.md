@@ -14,8 +14,8 @@ A personal collection of native Omarchy plugins by [Alec Xu](https://github.com/
 
 Inspired by *konomi* — preference or taste — Konochi brings small, thoughtful
 improvements to the desktop you use every day. Keep your workspaces recognizable,
-your windows within reach, your music visible, your dev ports and proxy routing
-under control, and your next break on time.
+your windows within reach and uncluttered, your music visible, your dev ports and
+proxy routing under control, and your next break on time.
 
 ## Plugins
 
@@ -28,6 +28,7 @@ under control, and your next break on time.
 | [**Konobreak**](https://github.com/xvvhang/omarchy-konobreak-plugin) | Work and break intervals with a bar countdown, notifications, pause/resume, and snoozing. | `konochi.konobreak` |
 | [**Konobeat**](https://github.com/xvvhang/omarchy-konobeat-plugin) | Now-playing controls, scrolling track information, a playback timeline with supported seeking, and eight real-audio visualization styles. | `konochi.konobeat` |
 | [**Konoview**](https://github.com/xvvhang/omarchy-konoview-plugin) | A fullscreen window overview with live previews, keyboard hints, search, and optional double-Super activation. | `konochi.konoview` |
+| [**Konocap**](https://github.com/xvvhang/omarchy-konocap-plugin) | Sliding titlebars only on the focused floating window, with theme integration and no manual Hyprland configuration. | `konochi.konocap` |
 | [**Konostat**](https://github.com/xvvhang/omarchy-konostat-plugin) | CPU, GPU, memory, storage, network, fan, and temperature monitoring with configurable bar metrics. | `konochi.konostat` |
 | [**Konospaces**](https://github.com/xvvhang/omarchy-konospaces-plugin) | Workspace labels with switchable monochrome icons, application names, or full-color icons, plus special-workspace support and live updates. | `konochi.konospaces` |
 
@@ -39,9 +40,9 @@ This repository is the series showcase, not an installable Omarchy plugin.
 Screenshots are maintained in this showcase's `assets/` directory or as
 `preview.png` in each plugin repository. Select an image to view it at full resolution.
 
-### Konocontrol
-
-[<img src="https://raw.githubusercontent.com/xvvhang/omarchy-konocontrol-plugin/main/preview.png" alt="Konocontrol with Media, Quick Actions, and native controls" width="360">](https://github.com/xvvhang/omarchy-konocontrol-plugin/blob/main/preview.png)
+| Konocontrol | Konocap |
+| --- | --- |
+| [<img src="https://raw.githubusercontent.com/xvvhang/omarchy-konocontrol-plugin/main/preview.png" alt="Konocontrol with Media, Quick Actions, and native controls" width="360">](https://github.com/xvvhang/omarchy-konocontrol-plugin/blob/main/preview.png) | [<img src="https://raw.githubusercontent.com/xvvhang/omarchy-konocap-plugin/main/preview.png" alt="Konocap showing a titlebar only on the focused floating terminal" width="360">](https://github.com/xvvhang/omarchy-konocap-plugin/blob/main/preview.png) |
 
 | Konoports | Konoproxy |
 | --- | --- |
@@ -88,6 +89,9 @@ omarchy plugin add https://github.com/xvvhang/omarchy-konobeat-plugin --enable
 # Window overview
 omarchy plugin add https://github.com/xvvhang/omarchy-konoview-plugin --enable
 
+# Focus-only floating titlebars
+omarchy plugin add https://github.com/xvvhang/omarchy-konocap-plugin --enable
+
 # System monitoring
 omarchy plugin add https://github.com/xvvhang/omarchy-konostat-plugin --enable
 
@@ -131,6 +135,12 @@ omarchy plugin add https://github.com/xvvhang/omarchy-konospaces-plugin --enable
   controls and notifications.
 - **Konoview** works through shell IPC. Double-Super activation requires the
   optional manual keybinding setup documented in its repository.
+- **Konocap** targets Omarchy 4.5 floating workspaces and automatically builds a
+  native extension using CMake, a C++23 compiler, pkg-config, and installed
+  Hyprland development dependencies; Python 3.9+ and stock
+  `omarchy-hyprland-titlebars` are required. No Hyprland config edits are needed;
+  disabling restores stock titlebars. Application-drawn titlebars are unaffected.
+  Other Hyprland versions may require source updates; see its compatibility notes.
 - **Konostat** uses Python 3 and readable system telemetry. Hardware support
   varies; NVIDIA metrics optionally use an already-installed `nvidia-smi`.
 - **Konospaces** needs Hyprland's Lua dispatch interface, Quickshell's Hyprland
